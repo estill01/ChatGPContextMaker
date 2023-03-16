@@ -1,7 +1,7 @@
 import os
 import tempfile
 from pathlib import Path
-from gpcontext_maker import concat_files_recursive
+from gpcontext_maker import make_context
 
 def create_test_files(base_dir):
     test_files = {
@@ -19,11 +19,11 @@ def create_test_files(base_dir):
 
     return test_files
 
-def test_concat_files_recursive():
+def test_make_context():
     with tempfile.TemporaryDirectory() as temp_dir:
         test_files = create_test_files(temp_dir)
         output_file = os.path.join(temp_dir, "output.txt")
-        concat_files_recursive(temp_dir, output_file)
+        make_context(temp_dir, output_file)
 
         assert Path(output_file).is_file(), "Output file not created"
 
@@ -38,6 +38,6 @@ def test_concat_files_recursive():
         assert output_content == expected_output, "Output content mismatch"
 
 if __name__ == "__main__":
-    test_concat_files_recursive()
+    test_make_context()
     print("Test passed!")
 
