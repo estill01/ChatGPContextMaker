@@ -13,8 +13,12 @@ def concat_files_recursive(directory, output_file):
             for file in files:
                 if file != os.path.basename(output_file):
                     filepath = os.path.join(root, file)
+                    relative_path = os.path.relpath(filepath, directory)
+                    
+                    delimiter = f"\n{'#' * 80}\n# File: {relative_path}\n{'#' * 80}\n\n"
+                    outfile.write(delimiter)
+                    
                     with open(filepath, 'r') as infile:
-                        outfile.write(f'### {filepath}\n')
                         outfile.write(infile.read())
                         outfile.write('\n\n')
 
@@ -44,4 +48,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

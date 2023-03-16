@@ -70,6 +70,6 @@ Replace `/path/to/input/directory`, `/path/to/output/directory`, and `output_fil
 
 ## Extending ChatGPTContextMaker
 
-You can extend the functionality of ChatGPTContextMaker by modifying the __main__.py script in the chatgpcontextmaker package.
+You can extend the functionality of ChatGPTContextMaker by modifying the `__main__.py` script in the chatgpcontextmaker package.
 
 To contribute to the project, simply fork the [GitHub repository](https://github.com/estill01/ChatGPContextMaker), make your changes, and submit a pull request.
