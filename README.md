@@ -16,7 +16,7 @@ ChatGPContextMaker is a command-line utility that concatenates files in a direct
 You can install ChatGPTContextMaker directly from PyPI using pip:
 
 ```
-pip install chatgpcontextmaker
+pip install gpcontext-maker
 ```
 
 ### Using Poetry
@@ -30,7 +30,7 @@ pip install poetry
 
 2. Add ChatGPTContextMaker to your project's dependencies:
 ```
-poetry add chatgpcontextmaker
+poetry add gpcontext-maker
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ poetry add chatgpcontextmaker
 To use ChatGPContextMaker as a command-line tool, you can run the following command in your terminal:
 
 ```
-python -m chatgpcontextmaker /path/to/input/directory -o /path/to/output/directory -f output_file_name
+python -m gpcontext-maker /path/to/input/directory -o /path/to/output/directory -f output_file_name
 ```
 * `/path/to/input/directory`: The directory containing the files you want to concatenate
 
