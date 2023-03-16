@@ -3,10 +3,12 @@
 
 import os
 import sys
+import subprocess
 import argparse
 import fnmatch
 from datetime import datetime
 from pathlib import Path
+import pyperclip
 
 def read_ignore_patterns(ignore_file):
     with open(ignore_file, "r") as f:
@@ -45,6 +47,7 @@ def concat_files_recursive(input_dir, output_file, ignore_patterns=None):
 def main():
     parser = argparse.ArgumentParser(description="Concatenate files from a directory into a single file.")
     parser.add_argument("input_dir", help="The input directory to concatenate.")
+    parser.add_argument("-c", "--clipboard", action="store_true", default=True, help="Copy the concatenated file content to the clipboard (default: True).")
     parser.add_argument("-i", "--ignore-file", help="A custom ignore file with patterns to ignore.", default=None)
     parser.add_argument("-l", "--list-ignore", action="store_true", help="List current ignore patterns.")
     parser.add_argument("-a", "--add-ignore", nargs="+", help="Add patterns to ignore.")
@@ -93,6 +96,12 @@ def main():
     if args.remove_ignore:
         user_patterns = [pattern for pattern in user_patterns if pattern not in args.remove_ignore]
         save_ignore_patterns(user_ignore_file, user_patterns)
+
+    if args.clipboard:
+        with open(output_file, "r") as outfile:
+            file_content = outfile.read()
+            pyperclip.copy(file_content)
+            print("The concatenated file content has been copied to the clipboard.")
 
     concat_files_recursive(input_dir, output_file, ignore_patterns)
 

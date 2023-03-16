@@ -11,6 +11,7 @@ homepage = "https://github.com/estill01/ChatGPContextMaker"
 python = "^3.9"
 argparse = "^1.4.0"
 pathlib = "^1.0.1"
+pyperclip = "^1.8.2"
 
 
 [tool.poetry.group.dev.dependencies]
