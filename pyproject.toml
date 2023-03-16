@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "gpcontext-maker"
 version = "0.1.0"
-description = "Generate a context file of your whole software project to feed into a LLM"
+description = "Generate a context file of your whole software project to feed into a LLM like ChatGPT"
 authors = ["estill01 <ehs.stillman@gmail.com>"]
-readme = "README.md"
-packages = [{include = "gpcontext_maker"}]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/estill01/ChatGPContextMaker"
 
 [tool.poetry.dependencies]
 python = "^3.9"
