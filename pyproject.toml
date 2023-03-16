@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gpcontext_maker"
-version = "1.1.0"
+version = "1.2.0"
 description = "Generate a context file of your whole software project to feed into a LLM like ChatGPT"
 authors = ["estill01 <ehs.stillman@gmail.com>"]
 license = "MIT"

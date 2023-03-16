@@ -1,0 +1,14 @@
+# Ignore common temporary files and directories
+__pycache__
+*.pyc
+*.pyo
+*.log
+*.tmp
+.git
+.DS_Store
+
+# Ignore common backup files
+*~
+*.bak
+*.swp
+
