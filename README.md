@@ -8,3 +8,8 @@ Concatenate all files in a project directory into one file so you can feed it in
 python concat_files.py /path/to/input/directory -o /path/to/output/directory -f output_file_name
 ```
 
+### Install via pip
+```
+python -m chatgpcontextmaker /path/to/input/directory -o /path/to/output/directory -f output_file_name
+```
+

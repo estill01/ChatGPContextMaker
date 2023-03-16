@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "gpcontext-maker"
 version = "0.1.0"
-description = ""
+description = "Generate a context file of your whole software project to feed into a LLM"
 authors = ["estill01 <ehs.stillman@gmail.com>"]
 readme = "README.md"
 packages = [{include = "gpcontext_maker"}]
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
